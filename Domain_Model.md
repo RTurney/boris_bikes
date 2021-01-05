@@ -17,6 +17,6 @@
 |Docking Station |release       |
 
 ## Object/Message Interaction
-Person --> see_if_working --> Bike --> true or false --> Person
-Person --> release --> Docking Station --> Bike
-Person --> use --> Bike
+Person --> see_if_working --> Bike --> true or false --> Person  
+Person --> release --> Docking Station --> Bike  
+Person --> use --> Bike  
