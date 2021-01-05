@@ -11,7 +11,7 @@
 
 |Objects         |Messages      |
 |----------------|--------------|
-|Person          |
+|Person          |              |
 |Bike            |use           |
-                 |see_if_working|
+|                |see_if_working|
 |Docking Station |release       |
