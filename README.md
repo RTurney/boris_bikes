@@ -1,0 +1,1 @@
+The project will create a program to manage a network of docking stations and bikes that anyone can use, emulating all the docking stations, bikes, and infrastructure (repair staff, and so on) required.
