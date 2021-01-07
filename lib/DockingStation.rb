@@ -1,8 +1,9 @@
-
+require_relative 'Bike'
 
 class DockingStation
   def release_bike
-    Bike.new
+    raise "No bikes at station" if @bike.nil?
+    @bike
   end
 
   def dock(bike)
