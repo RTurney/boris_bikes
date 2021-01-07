@@ -2,11 +2,14 @@ require 'DockingStation'
 require 'Bike'
 
 describe DockingStation do
-  #describe "responds to the method release_bike" do
-  it { is_expected.to respond_to :release_bike }
-  # it "responds to the method release_bike" do
-  #   expect(DockingStation).to respond_to :release_bike
+  # LONGER SYNTAX - do end block
+  # it "releases bikes" do
+  #   expect(DockingStation.new).to respond_to :release_bike
   # end
+  
+  # ONE LINE SYNTAX - DockingStation assumed by ruby as the subject 
+  it { is_expected.to respond_to :release_bike }
+  
   it "releases bike" do
     bike = subject.release_bike
     expect(bike).to be_working
