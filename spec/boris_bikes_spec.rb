@@ -11,8 +11,13 @@ describe DockingStation do
   it { is_expected.to respond_to :release_bike }
   
   it "releases bike" do
-    bike = subject.release_bike
-    expect(bike).to be_working
+    bike = Bike.new
+    subject.dock(bike)
+    expect(subject.release_bike).to be_working
+  end
+
+  it "checks if there is a bike, if there isn't one it raises an error" do
+    expect{ subject.release_bike }.to raise_error
   end
 
   #it { is_expected.to respond_to(:dock).with(1).argument }
