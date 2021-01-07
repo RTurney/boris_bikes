@@ -6,10 +6,10 @@ describe DockingStation do
   # it "releases bikes" do
   #   expect(DockingStation.new).to respond_to :release_bike
   # end
-  
-  # ONE LINE SYNTAX - DockingStation assumed by ruby as the subject 
+
+  # ONE LINE SYNTAX - DockingStation assumed by ruby as the subject
   it { is_expected.to respond_to :release_bike }
-  
+
   it "releases bike" do
     bike = Bike.new
     subject.dock(bike)
@@ -26,6 +26,12 @@ describe DockingStation do
     expect(subject.dock(bike)).to eq bike
   end
 
+  it "returns an error if you try to dock more than one bike" do
+    bike1, bike2 = Bike.new
+    subject.dock(bike1)
+    expect{subject.dock(bike2)}.to raise_error
+  end
+  
   it "returns docked bikes" do
     bike = Bike.new
     subject.dock(bike)
